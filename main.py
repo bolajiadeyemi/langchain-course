@@ -29,6 +29,7 @@ def main():
 
     llm = ChatOpenAI(temperature=0, model="gpt-5")
 
+
     chain = summary_prompt_template | llm
 
     response = chain.invoke(input={"information": information})
